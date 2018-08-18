@@ -8,6 +8,7 @@ public class IsPermutationTest {
     public void checkPermutation() {
         assertTrue(IsPermutation.checkPermutation("racecar", "carrace"));
         assertTrue(IsPermutation.checkPermutation("Wleecats", "alecWest"));
-        assertFalse(IsPermutation.checkPermutation("auehsont", "alecWest"));
+        assertFalse(IsPermutation.checkPermutation("aueehsont", "alecWest"));
+        assertFalse(IsPermutation.checkPermutation("22", "13"));
     }
 }

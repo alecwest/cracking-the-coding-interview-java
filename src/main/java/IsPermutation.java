@@ -1,12 +1,16 @@
+import java.util.HashMap;
+
 public class IsPermutation {
     public static boolean checkPermutation(String string1, String string2) {
-        Integer string1CharSum = 0;
-        Integer string2CharSum = 0;
+        HashMap<Character, Integer> hashMap = new HashMap<>();
         if (string1.length() != string2.length()) return false;
         for (int i = 0; i < string1.length(); i++) {
-            string1CharSum += (int)string1.charAt(i);
-            string2CharSum += (int)string2.charAt(i);
+            hashMap.put(string1.charAt(i), hashMap.getOrDefault(string1.charAt(i), 0) + 1);
+            hashMap.put(string2.charAt(i), hashMap.getOrDefault(string2.charAt(i), 0) - 1);
         }
-        return string1CharSum.equals(string2CharSum);
+        for (Character character: hashMap.keySet()) {
+            if (hashMap.getOrDefault(character, -1) != 0) return false;
+        }
+        return true;
     }
 }
