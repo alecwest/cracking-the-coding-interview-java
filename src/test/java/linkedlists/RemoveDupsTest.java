@@ -2,6 +2,7 @@ package linkedlists;
 
 import org.junit.Test;
 
+import static linkedlists.Helpers.assertLinkedListEquals;
 import static org.junit.Assert.*;
 
 public class RemoveDupsTest {
@@ -34,15 +35,5 @@ public class RemoveDupsTest {
         expectedHead.appendToTail(3);
         expectedHead.appendToTail(4);
         assertLinkedListEquals(expectedHead, RemoveDups.removeDupsNoHashMap(givenHead));
-    }
-
-    public void assertLinkedListEquals(Node expected, Node actual) {
-        assertEquals(expected.data, actual.data);
-        while (expected.next != null ) {
-            assertNotNull(actual.next);
-            expected = expected.next;
-            actual = actual.next;
-            assertEquals(expected.data, actual.data);
-        }
     }
 }
