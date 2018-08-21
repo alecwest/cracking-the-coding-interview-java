@@ -1,3 +1,5 @@
+package arraysandstrings;
+
 public class RotateMatrix {
     public static int[] rotateMatrix(int[] matrix) {
         int matrixSize = (int) Math.sqrt(((double) matrix.length));

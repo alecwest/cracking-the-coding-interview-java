@@ -1,3 +1,5 @@
+package arraysandstrings;
+
 public class URLIfy {
     public static String URLIfy(String givenString, Integer actualLength) {
         String resultString = givenString.trim();

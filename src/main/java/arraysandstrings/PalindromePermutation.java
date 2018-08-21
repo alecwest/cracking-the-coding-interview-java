@@ -1,3 +1,5 @@
+package arraysandstrings;
+
 import java.util.HashMap;
 
 public class PalindromePermutation {
